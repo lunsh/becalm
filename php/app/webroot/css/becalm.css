@@ -1,2 +1,86 @@
-a:link, a:visited, a:hover, a:active {
-  color: orangered; }
+/* Mood and other icons */
+@font-face {
+  font-family: 'MeteoconsRegular';
+  src: url("fonts/meteocons-webfont.eot");
+  src: url("fonts/meteocons-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/meteocons-webfont.woff") format("woff"), url("fonts/meteocons-webfont.ttf") format("truetype"), url("fonts/meteocons-webfont.svg#MeteoconsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'IcoMoon-Free';
+  src: url("fonts/IcoMoon-Free.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background: #f7f7f4;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif; }
+
+a:link, a:visited {
+  font-weight: 400; }
+
+/* MOODS */
+.mood:before {
+  font-family: 'MeteoconsRegular';
+  content: attr(data-icon); }
+
+/* HEADER */
+/* CONTENT */
+#content {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1000px; }
+
+.full-table {
+  width: 100%; }
+
+/* FOUNDATION OVERWRITES */
+button, .button {
+  background-color: transparent;
+  border: 1px solid #f86920;
+  color: #f86920;
+  padding: 0.8rem 1.6rem 0.85rem 1.6rem; }
+  button.small, .button.small {
+    padding: 0.65rem 1.138rem 0.609rem 1.138rem; }
+  button:focus, button:hover, .button:focus, .button:hover {
+    background-color: #f86920; }
+  button.disabled, button[disabled], .button.disabled, .button[disabled] {
+    background-color: transparent;
+    border-color: #e2e2dd;
+    color: #999; }
+    button.disabled:focus, button.disabled:hover, button[disabled]:focus, button[disabled]:hover, .button.disabled:focus, .button.disabled:hover, .button[disabled]:focus, .button[disabled]:hover {
+      background-color: transparent;
+      border-color: #e2e2dd;
+      color: #999; }
+  button.dropdown.secondary:after, button.dropdown.tiny.secondary:after, button.dropdown.small.secondary:after, button.dropdown.large.secondary:after, .button.dropdown.secondary:after, .button.dropdown.tiny.secondary:after, .button.dropdown.small.secondary:after, .button.dropdown.large.secondary:after {
+    border-color: #333 transparent transparent transparent; }
+  button.dropdown:after, button.dropdown.tiny:after, button.dropdown.small:after, button.dropdown.large:after, .button.dropdown:after, .button.dropdown.tiny:after, .button.dropdown.small:after, .button.dropdown.large:after {
+    border-color: #f86920 transparent transparent transparent; }
+  button.dropdown.alert:after, button.dropdown.success:after, button.dropdown.tiny.alert:after, button.dropdown.tiny.success:after, button.dropdown.small.alert:after, button.dropdown.small.success:after, button.dropdown.large.alert:after, button.dropdown.large.success:after, .button.dropdown.alert:after, .button.dropdown.success:after, .button.dropdown.tiny.alert:after, .button.dropdown.tiny.success:after, .button.dropdown.small.alert:after, .button.dropdown.small.success:after, .button.dropdown.large.alert:after, .button.dropdown.large.success:after {
+    border-color: #fff transparent transparent transparent; }
+  button.split span, button.split.tiny span, button.split.small span, button.split.large span, .button.split span, .button.split.tiny span, .button.split.small span, .button.split.large span {
+    border-left-color: #f86920; }
+    button.split span:after, button.split.tiny span:after, button.split.small span:after, button.split.large span:after, .button.split span:after, .button.split.tiny span:after, .button.split.small span:after, .button.split.large span:after {
+      border-color: #f86920 transparent transparent transparent; }
+  button.split.alert span, button.split.success span, button.split.secondary span, button.split.tiny.alert span, button.split.tiny.success span, button.split.tiny.secondary span, button.split.small.alert span, button.split.small.success span, button.split.small.secondary span, button.split.large.alert span, button.split.large.success span, button.split.large.secondary span, .button.split.alert span, .button.split.success span, .button.split.secondary span, .button.split.tiny.alert span, .button.split.tiny.success span, .button.split.tiny.secondary span, .button.split.small.alert span, .button.split.small.success span, .button.split.small.secondary span, .button.split.large.alert span, .button.split.large.success span, .button.split.large.secondary span {
+    border-left-color: #fff; }
+    button.split.alert span:after, button.split.success span:after, button.split.secondary span:after, button.split.tiny.alert span:after, button.split.tiny.success span:after, button.split.tiny.secondary span:after, button.split.small.alert span:after, button.split.small.success span:after, button.split.small.secondary span:after, button.split.large.alert span:after, button.split.large.success span:after, button.split.large.secondary span:after, .button.split.alert span:after, .button.split.success span:after, .button.split.secondary span:after, .button.split.tiny.alert span:after, .button.split.tiny.success span:after, .button.split.tiny.secondary span:after, .button.split.small.alert span:after, .button.split.small.success span:after, .button.split.small.secondary span:after, .button.split.large.alert span:after, .button.split.large.success span:after, .button.split.large.secondary span:after {
+      border-color: #fff transparent transparent transparent; }
+
+.breadcrumbs {
+  background: transparent;
+  border: 0; }
+
+table {
+  border: 1px solid #6dd2e6; }
+  table thead {
+    background: linear-gradient(#c9eff6, white);
+    border-bottom: 1px solid #6dd2e6; }
+  table tr {
+    border-bottom: 1px solid #6dd2e6; }
+    table tr:last-child {
+      border: 0; }

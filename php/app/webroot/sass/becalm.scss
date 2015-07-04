@@ -1,1 +1,133 @@
-a:link, a:visited, a:hover, a:active { color: orangered; }
+// Becalm variables!
+$becalm-blue: #6dd2e6;
+$becalm-lightblue: #c9eff6;
+$becalm-gray: #e2e2dd;
+$becalm-orangered: #f1863c;
+$becalm-red: #f86920;
+
+// Define new fonts
+/* Mood and other icons */
+@font-face {
+    font-family: 'MeteoconsRegular';
+    src: url('fonts/meteocons-webfont.eot');
+    src: url('fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/meteocons-webfont.woff') format('woff'),
+         url('fonts/meteocons-webfont.ttf') format('truetype'),
+         url('fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('fonts/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background: #f7f7f4;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+a:link, a:visited {
+    font-weight: 400;
+    a:hover, a:active {
+        
+    }
+}
+
+/* MOODS */
+.mood:before {
+	font-family: 'MeteoconsRegular';
+	content: attr(data-icon);
+}
+
+/* HEADER */
+
+/* CONTENT */
+#content {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.full-table {
+    width: 100%;
+}
+
+/* FOUNDATION OVERWRITES */
+button, .button {
+    background-color: transparent;
+    border: 1px solid $becalm-red;
+    color: $becalm-red;
+    padding: 0.8rem 1.6rem 0.85rem 1.6rem;
+    &.small {
+        padding: 0.65rem 1.138rem 0.609rem 1.138rem;
+    }
+    &:focus, &:hover {
+        background-color: $becalm-red;
+    }
+    &.disabled, &[disabled] {
+        background-color: transparent;
+        border-color: #e2e2dd;
+        color: #999;
+        &:focus, &:hover {
+            background-color: transparent;
+            border-color: $becalm-gray;
+            color: #999;
+        }
+    }
+    &.dropdown, &.dropdown.tiny, &.dropdown.small, &.dropdown.large {
+        &.secondary {
+            &:after {
+                border-color: #333 transparent transparent transparent;   
+            }
+        }
+        &:after {
+            border-color: $becalm-red transparent transparent transparent;   
+        }
+        &.alert, &.success {
+            &:after {
+                border-color: #fff transparent transparent transparent;   
+            }
+        }            
+    }
+    &.split, &.split.tiny, &.split.small, &.split.large {
+        span {
+            border-left-color: $becalm-red;
+            &:after {
+                border-color: $becalm-red transparent transparent transparent;
+            }
+        }
+        &.alert, &.success, &.secondary {
+            span {
+                border-left-color: #fff;
+                &:after {
+                    border-color: #fff transparent transparent transparent;
+                }
+            }
+        }
+    }
+}
+.breadcrumbs {
+    background: transparent;
+    border: 0;
+}
+table {
+    border: 1px solid $becalm-blue;
+    thead {
+        background: linear-gradient($becalm-lightblue, #fff);
+        border-bottom: 1px solid $becalm-blue;
+    }
+    tr {
+        border-bottom: 1px solid $becalm-blue;
+        &:last-child {
+            border: 0;   
+        }
+    }
+}

@@ -29,10 +29,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
+        echo "<link href='//fonts.googleapis.com/css?family=Raleway:500,400' rel='stylesheet' type='text/css'>";
+        echo "<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>";
 
 		echo $this->Html->css('normalize');
 		echo $this->Html->css('foundation.min');
 		echo $this->Html->css('becalm');
+		echo $this->Html->css('icomoon');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -41,26 +44,35 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1>becalm</h1>
-            <?php echo $this->Html->link(
-                'Login ',
-                array('manager' => false, 'controller' => 'users', 'action' => 'login')
-            ); 
-                echo $this->Html->link(
-                'Logout ',
-                array('manager' => false, 'controller' => 'users', 'action' => 'logout')
-            );
-                echo $this->Html->link(
-                'Register',
-                array('manager' => false, 'controller' => 'users', 'action' => 'add')
-            );
-            ?>
-		</div>
+		<header>
+            <div class="main-header">
+                <h1>becalm</h1>
+            </div>
+            <div class="sub-header">
+                
+            </div>
+		</header>
+        
+        
+        <?php echo $this->Html->link(
+            'Login ',
+            array('manager' => false, 'controller' => 'users', 'action' => 'login')
+        ); 
+            echo $this->Html->link(
+            'Logout ',
+            array('manager' => false, 'controller' => 'users', 'action' => 'logout')
+        );
+            echo $this->Html->link(
+            'Register',
+            array('manager' => false, 'controller' => 'users', 'action' => 'add')
+        );
+        ?>
+        <a href="" class="mood" data-icon="B">Link</a>
+        <a href="" class="icon icon-camera">Link</a>
+        
+        
 		<div id="content">
-
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
