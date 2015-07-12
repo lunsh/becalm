@@ -29,6 +29,35 @@ a:link, a:visited {
   content: attr(data-icon); }
 
 /* HEADER */
+.main-header {
+  background-color: #6dd2e6;
+  background-image: url("../img/becalm-logo2.png");
+  background-size: 219px 100px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
+  margin: 0;
+  padding: 0;
+  height: 100px; }
+  .main-header h1 {
+    color: #fff;
+    margin: 0;
+    display: none; }
+
+.sub-header {
+  background-color: #c9eff6;
+  margin: 0 0 1em 0;
+  padding: 0.3em;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+
+/* FOOTER */
+.main-footer {
+  width: 100%; }
+  .main-footer p {
+    color: #e2e2dd;
+    text-align: center; }
+
 /* CONTENT */
 #content {
   width: 70%;
@@ -78,9 +107,11 @@ button, .button {
 table {
   border: 1px solid #6dd2e6; }
   table thead {
-    background: linear-gradient(#c9eff6, white);
+    background: linear-gradient(#c9eff6, #fff);
     border-bottom: 1px solid #6dd2e6; }
   table tr {
     border-bottom: 1px solid #6dd2e6; }
     table tr:last-child {
       border: 0; }
+
+/*# sourceMappingURL=becalm.css.map */

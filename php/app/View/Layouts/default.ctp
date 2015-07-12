@@ -24,7 +24,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -49,12 +48,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                 <h1>becalm</h1>
             </div>
             <div class="sub-header">
-                
-            </div>
-		</header>
-        
-        
-        <?php echo $this->Html->link(
+            	<nav>
+                      <?php echo $this->Html->link(
             'Login ',
             array('manager' => false, 'controller' => 'users', 'action' => 'login')
         ); 
@@ -69,6 +64,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         ?>
         <a href="" class="mood" data-icon="B">Link</a>
         <a href="" class="icon icon-camera">Link</a>
+          
+          		</nav>
+            </div>
+		</header>
         
         
 		<div id="content">
@@ -84,6 +83,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
+	
+	<footer>
+		<div class="main-footer">
+			<p>&copy; becalm | disclaimer</p>
+		</div>
+	</footer>
 	<?php
 	// Remove this sql_dump to allow DebugKit to handle more advanced SQL display
 	// echo $this->element('sql_dump');

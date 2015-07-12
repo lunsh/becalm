@@ -50,6 +50,43 @@ a:link, a:visited {
 
 /* HEADER */
 
+.main-header {
+	background-color: $becalm-blue;
+	background-image: url("../img/becalm-logo2.png");
+	background-size: 219px 100px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin: 0;
+	padding: 0;
+	height: 100px;
+
+	h1 {
+		color: #fff;
+		margin: 0;
+		display: none;
+	}
+}
+
+.sub-header {
+	background-color: $becalm-lightblue;
+	margin: 0 0 1em 0;
+	padding: 0.3em;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/* FOOTER */
+
+.main-footer{
+	width: 100%;
+	
+	p {
+		color: $becalm-gray;
+		text-align: center;
+	}
+}
+
 /* CONTENT */
 #content {
     width: 70%;
