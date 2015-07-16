@@ -31,18 +31,19 @@ a:link, a:visited {
 /* HEADER */
 .main-header {
   background-color: #6dd2e6;
-  background-image: url("../img/becalm-logo2.png");
-  background-size: 219px 100px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top left;
   margin: 0;
-  padding: 0;
-  height: 100px; }
+  padding: 0; }
   .main-header h1 {
     color: #fff;
     margin: 0;
-    display: none; }
+    background-image: url("../img/becalm-logo2.png");
+    background-size: 219px 100px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 100px;
+    text-align: -9999px;
+    overflow: hidden; }
 
 .sub-header {
   background-color: #c9eff6;

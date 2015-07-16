@@ -52,19 +52,20 @@ a:link, a:visited {
 
 .main-header {
 	background-color: $becalm-blue;
-	background-image: url("../img/becalm-logo2.png");
-	background-size: 219px 100px;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: top left;
 	margin: 0;
 	padding: 0;
-	height: 100px;
 
 	h1 {
 		color: #fff;
 		margin: 0;
-		display: none;
+		background-image: url("../img/becalm-logo2.png");
+		background-size: 219px 100px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: top left;
+		height: 100px;
+		text-align: -9999px;
+		overflow: hidden;
 	}
 }
 
