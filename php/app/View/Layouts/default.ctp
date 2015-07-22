@@ -44,8 +44,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<header>
-            <div class="main-header">
-                <h1>becalm</h1>
+            <div class="main-header clearfix">
+                <h1 class="left">becalm</h1>
+                <div class="header-settings right">
+                    <ul>
+                        <li><a href="#" class="button round small blue">Panic!</a></li>
+                        <li class="gear"><a href="#" class="button round small blue icon">cog</a></li>
+                        <li class="avatar"><a href="#" class="avatar-icon"><img src="" alt="avatar" /></a></li>
+                    </ul>
+                    
+                </div>
             </div>
             <div class="sub-header">
             	<nav>
@@ -73,15 +81,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div id="content">
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
+		</div>]
 	</div>
 	
 	<footer>

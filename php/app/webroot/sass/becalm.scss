@@ -4,6 +4,7 @@ $becalm-lightblue: #c9eff6;
 $becalm-gray: #e2e2dd;
 $becalm-orangered: #f1863c;
 $becalm-red: #f86920;
+$becalm-darkblue: #002033;
 
 // Define new fonts
 /* Mood and other icons */
@@ -22,6 +23,39 @@ $becalm-red: #f86920;
     src: url('fonts/IcoMoon-Free.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+html:before,html:after,body:before,body:after{
+    content:"";
+    background: $becalm-blue;
+    position:fixed;
+    display:block;
+    z-index:5;
+}
+
+/* ...and position them! */
+html:before{
+    height:3px;
+    left:0;
+    right:0;
+    top:0;
+}
+html:after{
+    width:3px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height:3px;
+    right:0;
+    bottom:0;
+    left:0;
+}
+body:after{
+    width:3px;
+    top:0;
+    bottom:0;
+    left:0;
 }
 body {
     background: #f7f7f4;
@@ -51,30 +85,63 @@ a:link, a:visited {
 /* HEADER */
 
 .main-header {
-	background-color: $becalm-blue;
+	background-color: #fff;
 	margin: 0;
-	padding: 0;
+	padding: 13px 23px 10px;
 
 	h1 {
 		color: #fff;
-		margin: 0;
-		background-image: url("../img/becalm-logo2.png");
-		background-size: 219px 100px;
-		background-attachment: fixed;
+		background-image: url("../img/becalm-logo.png");
+		background-size: 142px 45px;
 		background-repeat: no-repeat;
-		background-position: top left;
-		height: 100px;
-		text-align: -9999px;
+		text-indent: -9999px;
 		overflow: hidden;
+        line-height: 1;
+        width: 142px;
+        margin: 0;
 	}
+    ul {
+        list-style: none; 
+        padding: 0; 
+        margin: 0;
+        li {
+            display: inline-block;
+            button.small, .button.small {
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            &.gear {
+                button.small, .button.small {
+                    padding: 0.65rem;
+                }
+            }
+            &.avatar {
+                border: 1px solid $becalm-blue;
+                border-radius: 1000px;
+                img {
+                    width: 36px;
+                    height: 36px;
+                    border: 5px solid #fff;
+                    border-radius: 1000px;
+                }
+            }
+        }
+    }
+
 }
 
 .sub-header {
 	background-color: $becalm-lightblue;
 	margin: 0 0 1em 0;
 	padding: 0.3em;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+	border-top: 1px solid $becalm-blue;
+	border-bottom: 1px solid $becalm-blue;
+    a:link, a:visited {
+        color: $becalm-darkblue;
+    }
+    a:hover, a:active {
+        color: #246775;
+    }
 }
 
 /* FOOTER */
@@ -85,6 +152,7 @@ a:link, a:visited {
 	p {
 		color: $becalm-gray;
 		text-align: center;
+        margin: 0;
 	}
 }
 
@@ -104,6 +172,14 @@ button, .button {
     border: 1px solid $becalm-red;
     color: $becalm-red;
     padding: 0.8rem 1.6rem 0.85rem 1.6rem;
+    &.blue {
+        border: 1px solid $becalm-blue;
+        color: $becalm-blue;
+        &:focus, &:hover {
+            background-color: $becalm-blue;
+            color: #fff;
+        }
+    }
     &.small {
         padding: 0.65rem 1.138rem 0.609rem 1.138rem;
     }
@@ -159,7 +235,7 @@ button, .button {
 table {
     border: 1px solid $becalm-blue;
     thead {
-        background: linear-gradient($becalm-lightblue, #fff);
+        background: $becalm-lightblue;
         border-bottom: 1px solid $becalm-blue;
     }
     tr {

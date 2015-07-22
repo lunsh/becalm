@@ -10,6 +10,38 @@
   src: url("fonts/IcoMoon-Free.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+html:before, html:after, body:before, body:after {
+  content: "";
+  background: #6dd2e6;
+  position: fixed;
+  display: block;
+  z-index: 5; }
+
+/* ...and position them! */
+html:before {
+  height: 3px;
+  left: 0;
+  right: 0;
+  top: 0; }
+
+html:after {
+  width: 3px;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+body:before {
+  height: 3px;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+body:after {
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+
 body {
   background: #f7f7f4;
   font-family: 'Open Sans', sans-serif;
@@ -30,34 +62,57 @@ a:link, a:visited {
 
 /* HEADER */
 .main-header {
-  background-color: #6dd2e6;
+  background-color: #fff;
   margin: 0;
-  padding: 0; }
+  padding: 13px 23px 10px; }
   .main-header h1 {
     color: #fff;
-    margin: 0;
-    background-image: url("../img/becalm-logo2.png");
-    background-size: 219px 100px;
-    background-attachment: fixed;
+    background-image: url("../img/becalm-logo.png");
+    background-size: 142px 45px;
     background-repeat: no-repeat;
-    background-position: top left;
-    height: 100px;
-    text-align: -9999px;
-    overflow: hidden; }
+    text-indent: -9999px;
+    overflow: hidden;
+    line-height: 1;
+    width: 142px;
+    margin: 0; }
+  .main-header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .main-header ul li {
+      display: inline-block; }
+      .main-header ul li button.small, .main-header ul li .button.small {
+        margin-bottom: 0;
+        line-height: 1; }
+      .main-header ul li.gear button.small, .main-header ul li.gear .button.small {
+        padding: 0.65rem; }
+      .main-header ul li.avatar {
+        border: 1px solid #6dd2e6;
+        border-radius: 1000px; }
+        .main-header ul li.avatar img {
+          width: 36px;
+          height: 36px;
+          border: 5px solid #fff;
+          border-radius: 1000px; }
 
 .sub-header {
   background-color: #c9eff6;
   margin: 0 0 1em 0;
   padding: 0.3em;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000; }
+  border-top: 1px solid #6dd2e6;
+  border-bottom: 1px solid #6dd2e6; }
+  .sub-header a:link, .sub-header a:visited {
+    color: #002033; }
+  .sub-header a:hover, .sub-header a:active {
+    color: #246775; }
 
 /* FOOTER */
 .main-footer {
   width: 100%; }
   .main-footer p {
     color: #e2e2dd;
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
 
 /* CONTENT */
 #content {
@@ -74,6 +129,12 @@ button, .button {
   border: 1px solid #f86920;
   color: #f86920;
   padding: 0.8rem 1.6rem 0.85rem 1.6rem; }
+  button.blue, .button.blue {
+    border: 1px solid #6dd2e6;
+    color: #6dd2e6; }
+    button.blue:focus, button.blue:hover, .button.blue:focus, .button.blue:hover {
+      background-color: #6dd2e6;
+      color: #fff; }
   button.small, .button.small {
     padding: 0.65rem 1.138rem 0.609rem 1.138rem; }
   button:focus, button:hover, .button:focus, .button:hover {
@@ -108,11 +169,9 @@ button, .button {
 table {
   border: 1px solid #6dd2e6; }
   table thead {
-    background: linear-gradient(#c9eff6, #fff);
+    background: #c9eff6;
     border-bottom: 1px solid #6dd2e6; }
   table tr {
     border-bottom: 1px solid #6dd2e6; }
     table tr:last-child {
       border: 0; }
-
-/*# sourceMappingURL=becalm.css.map */
